@@ -1,0 +1,15 @@
+// Location 
+
+.map-box {
+    width: 100%;
+    @media screen and (min-width: 1000px){
+        padding: 5px;    
+    }
+    h2 {
+        color: $main-bl;
+        text-align: center;
+        iframe {
+            width: 100%;
+        }
+    }
+}

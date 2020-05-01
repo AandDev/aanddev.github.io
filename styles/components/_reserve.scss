@@ -1,0 +1,61 @@
+// Reserve
+
+.reserve-wrapper {
+    width: 100%;
+    background-image: url(https://images.pexels.com/photos/1457812/pexels-photo-1457812.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0;
+    margin-top: 3rem;
+    .reserve-box {
+        width: 100%;
+        padding-top: 3rem;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5));
+        @media screen and (min-width: 1000px){
+            width: 50%;    
+        }
+        h2 {
+            color: $light-txt;
+        }
+        .input-box {
+            padding: 40px;
+            .input-items {
+                margin-bottom: 20px;
+                label,
+                input {
+                    color: $light-txt;
+                    width: 100%;
+                }
+                input{
+                    font-size: 14px;
+                    outline: none;
+                    width: 100%;
+                    background: none;
+                    border: none;
+                    border-bottom: 3px solid $main-bl;
+                }
+
+            }
+            input[type="submit"] {
+                width: 60%;
+                background-color: $main-bl;
+                border: 1px solid $main-bl;
+                border-radius: 20px;
+                color: $light-txt;
+                font-size: 16px;
+                transition: all 0.3s ease;
+                cursor: pointer;
+                display: block;
+                margin: 0 auto;
+                &:hover {
+                    background-color: $light-gn;
+                    border: 1px solid $light-gn;
+                }
+            }
+        }
+    }
+}

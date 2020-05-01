@@ -1,0 +1,185 @@
+// Hearder
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.3)), url(https://images.pexels.com/photos/1591375/pexels-photo-1591375.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-flow: column nowrap;
+    .nav-bar {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        .logo {
+            color: #fff;
+            //padding-top: 1.5em;
+            h4 {
+                font-family: $title;
+                font-size: 2em;
+            }
+            p {
+                letter-spacing: 5px;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+        .menu {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba($main-bl, $alpha: 0.9);
+            display: flex;
+            flex-flow: column;
+            justify-content: space-around;
+            align-items: center;
+            list-style: none;
+            clip-path: circle(0 at 90% 5%);
+            -webkit-clip-path: circle(0 at 90% 5%);
+            transition: all 0.8s ease-out;
+            z-index: 9;
+            .menu-links {
+                opacity: 0;
+                // Extra
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 20vh;
+                text-align: center;
+                align-self: center;
+                a {
+                    color: $light-txt;
+                    font-weight: bold;
+                    padding: 40px;
+                }
+            }
+            
+            .menu-links:nth-child(1) {
+                transition: all 0.8s ease 0.3s;
+            }
+            .menu-links:nth-child(2) {
+                transition: all 0.8s ease 0.4s;
+            }
+            .menu-links:nth-child(3) {
+                transition: all 0.8s ease 0.5s;
+            }
+            .menu-links:nth-child(4) {
+                transition: all 0.8s ease 0.6s;
+            }
+            .menu-links:nth-child(5) {
+                transition: all 0.8s ease 0.7s;
+            }
+            .menu-links.fade {
+                opacity: 1;
+            }
+            
+        }
+        .menu.open {
+            clip-path: circle(1000px at 90% 5%);
+            -webkit-clip-path: circle(1000px at 90% 5%);
+        }
+        .menu-icon {
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translate(-5%, -50%);
+            cursor: pointer;
+            z-index: 10;
+            .line {
+                width: 30px;
+                height: 3px;
+                background-color: $light-txt;
+                margin: 5px;
+            }
+        }
+    }
+    .title {
+        color: $light-txt;
+        width: 80%;
+        margin: 8em auto;
+        text-align: center;
+        h1 {
+            font-size: 2.5em;
+        }
+    }
+    .reserve-btn {
+        margin: 30px 0;
+        //width: 100%;
+        //width: 50%;
+        text-align: center;
+        a {
+            font-weight: bold;
+            color: $light-txt;
+            background-color: $main-gn;
+            border: 3px solid $main-gn;
+            border-radius: 10px;
+            padding: 10px 14px;
+            transition: all 0.3s;
+            &:hover {
+                background-color: $main-bl;
+                border: 3px solid $main-bl;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .header {
+        .nav-bar {
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 2em;
+            .menu {
+                position: initial;
+                width: 50%;
+                height: 10vh;
+                background: none;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: flex-end;
+                align-items: center;
+                list-style: none;
+                clip-path: none;
+                -webkit-clip-path: none;
+                z-index: 0;
+                .menu-links {
+                    opacity: 1;
+                    display: block;
+                    width: 20%;
+                    height: 0;
+                    a {
+                        color: $light-txt;
+                        font-size: 14px;
+                        letter-spacing: 2px;
+                        font-weight: bold;
+                        padding: 5px 7px;
+                        border: 2.5px solid #ffffff00;
+                        border-radius: 20px;
+                        transition: all 0.3s ease;
+                        &:hover {
+                            border: 2.5px solid hsla(0, 0%, 100%, 0.7);
+                        }
+                    }
+                }
+            }
+            .menu-icon {
+                display: none;
+            }
+        }
+        .title {
+            color: $light-txt;
+            width: 80%;
+            margin: 9em auto;
+            text-align: center;
+            h1 {
+                font-size: 3em;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,90 @@
+// Rooms
+
+.rooms-box {
+    width: 90%;
+    margin: 0 auto;
+    h2 {
+        color: $main-bl;
+        text-align: center;
+    }
+    .rooms-items {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        @media screen and (min-width: 1000px){
+            flex-flow: row wrap;    
+        }
+        figure{
+            width: 100%;
+            @media screen and (min-width: 1000px){
+                width: 45%;    
+            }
+            img {
+                width: 100%;
+            }
+        }
+        .room-text {
+            width: 100%;
+            margin-bottom: 40px;
+            color: $dark-txt;
+            @media screen and (min-width: 1000px){
+                width: 45%; 
+                font-size: 15px;
+                padding: 0 40px;
+                margin: 0 auto;  
+                text-align: center;
+                h3 {
+                    font-size: 1.5em;
+                    margin-bottom: 1em;
+                }
+                p {
+                    line-height: 1.9;
+                }
+            }
+            .rooms-details {
+                text-align: center;
+                padding-bottom: 15px;
+                margin-bottom: 30px;
+                @media screen and (min-width: 1000px){
+                    padding: 0;
+                    margin: 0;
+                    border: none;
+                    margin-top: 1em; 
+                }
+                p{
+                    display: inline-block;
+                    padding: 0 20px;
+                    //color: $main-bl;
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .reserve-btn {
+                margin-top: 20px;
+                text-align: center;
+                border-bottom: 2px solid rgba(0, 122, 223, 0.5);
+                padding-bottom: 20px;
+                a {
+                    font-weight: bold;
+                    color: $main-bl;
+                    background-color: none;
+                    border: 3px solid $main-bl;
+                    border-radius: 10px;
+                    padding: 10px 14px;
+                    transition: all 0.3s ease;
+                    &:hover {
+                        color: $light-txt;
+                        background-color: $main-bl;
+                        border: 3px solid $main-bl;
+                    }
+                }
+                @media screen and (min-width: 1000px){
+                    border: none;
+                    margin-top: 40px;  
+                }
+            }
+        }
+    }
+}

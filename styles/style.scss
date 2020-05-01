@@ -1,0 +1,55 @@
+// Variables
+
+// Colors
+$main-bl: #0DA1FF;
+$light-bl: #00FFD9;
+$main-gn: #0BFF48;
+$light-gn: #01FF7D;
+$light-txt: #fff;
+$dark-txt: #383838;
+
+// Fonts
+$general: 'Raleway', sans-serif;
+$title: 'Lobster', cursive;
+
+
+html {
+	scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $general;
+    line-height: 1.6;
+}
+
+h2 {
+    font-family: $title;
+    margin-bottom: 1rem;
+    font-size: 35px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    //padding-top: 3rem;
+    padding: 3rem 0;
+    position: relative;
+}
+
+
+
+@import "components/header2";
+@import "components/theHostel";
+@import "components/services";
+@import "components/rooms";
+@import "components/activitiesSld";
+@import "components/reserve";
+@import "components/location";
+@import "components/footer";
+
+

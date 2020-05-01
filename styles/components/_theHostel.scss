@@ -1,0 +1,39 @@
+// The Hostel
+
+.hostel-box {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: 1000px){    
+        flex-flow: row nowrap;
+    }
+    .hostel-text {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        @media screen and (min-width: 1000px){
+            width: 50%;    
+        }
+    }
+    h2 {
+        color: $main-bl;
+    }
+    p {
+        padding: 20px 10px;
+        line-height: 1.9;
+        
+    } 
+    .hostel-img {
+        width: 100%;
+        @media screen and (min-width: 1000px){
+            width: 50%;    
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
